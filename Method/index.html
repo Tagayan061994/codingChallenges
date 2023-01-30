@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+    <title>Method Implementation</title>
+  </head>
+  <body>
+    <p>
+      Define a new method on String which will replace all the same sequential
+      characters by single _ (underscore) symbol.<br />
+      Open the console to see your results.
+      <br /><br />
+      // Examples<br />
+      'aaaaaa'.shorten() -> '_'<br />
+      'aaabbb'.shorten() -> '__'<br />
+      'aabbcc'.shorten() -> '___'<br />
+      'aaaabaaaa'.shorten() -> '_b_'
+
+      <script type="text/javascript">
+        // write code here
+        String.prototype.shorten = function () {
+          function splitStringByConsequetiveSymbols(str) {
+            let arr = [];
+            let l = null;
+            let j = -1;
+
+            for (let i = 0; i < str.length; i++) {
+              let c = str.charAt(i);
+              l == c ? (arr[j] += c) : (arr[++j] = c);
+              l = c;
+            }
+            return arr;
+          }
+		  
+          const splitedStrs = splitStringByConsequetiveSymbols(this.valueOf());
+
+          const shortedStr = splitedStrs.reduce((acc, splitedStr) => {
+            if (splitedStr.length === 1) {
+              acc += splitedStr;
+            } else {
+              acc += "_";
+            }
+
+            return acc;
+          }, "");
+          return shortedStr;
+        };
+
+        console.log("aaaaaa".shorten()); // '_'
+        console.log("aaabbb".shorten()); // '__'
+        console.log("aabbcc".shorten()); // '___'
+        console.log("aaaabaaaa".shorten()); // '_b_'
+      </script>
+    </p>
+  </body>
+</html>

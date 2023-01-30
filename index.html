@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Coding Challenges</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Roboto', sans-serif;
+		}
+		.limiter {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.container {
+			width: 100%;
+			height: 100vh;
+			background: #c850c0;
+			background: linear-gradient(45deg, #4158d0, #c850c0);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.wrap-table {
+		  width: 1170px;
+		}
+
+		h1, p {
+			color:  #f5f5f5;
+		}
+
+		table {
+			border-spacing: 1;
+			border-collapse: collapse;
+			background: white;
+			border-radius: 10px;
+			overflow: hidden;
+			width: 100%;
+			margin: 0 auto;
+			position: relative;
+		}
+		table * {
+			position: relative;
+		}
+		table td, table th {
+			padding-left: 28px;
+		}
+		table thead tr {
+			height: 60px;
+			background: #36304a;
+		}
+		table tbody tr {
+			height: 50px;
+		}
+		table tbody tr:last-child {
+			border: 0;
+		}
+		table td, table th {
+			text-align: left;
+		}
+		table td.l, table th.l {
+			text-align: right;
+		}
+		table td.c, table th.c {
+			text-align: center;
+		}
+		table td.r, table th.r {
+			text-align: center;
+		}
+
+
+		thead th {
+			font-size: 18px;
+			color: #fff;
+			line-height: 1.2;
+		}
+
+		tbody tr:nth-child(even) {
+			background-color: #f5f5f5;
+		}
+
+		tbody tr, tbody tr a {
+			font-size: 15px;
+			color: #808080;
+			line-height: 1.2;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="limiter">
+		<div class="container">
+			<div class="wrap-table">
+				<h1>Coding Challenges</h1>
+				<p>Click on any task to see the task description. Every task gives you some points. Try to score as much as possible in 1.5 hours.</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Type</th>
+							<th>Score</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="UI/index.html">UI implementation</a></td>
+							<td>1 pts</td>
+						</tr>
+						<tr>
+							<td><a href="Algorithm/index.html">Algorithm implementation</a></td>
+							<td>3 pts</td>
+						</tr>
+						<tr>
+							<td><a href="Method/index.html">Method implmenetation</a></td>
+							<td>3 pts</td>
+						</tr>
+						<tr>
+							<td><a href="App/index.html">Small app</a></td>
+							<td>3 pts</td>
+						</tr>
+						<tr>
+							<td><a href="Testing/index.html">Test driven development</a></td>
+							<td>5 pts</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

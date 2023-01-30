@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+    <title>Algorithm Implementation</title>
+  </head>
+  <body>
+    <p>
+      Implement a function which will count all the polindromes in a given
+      string.<br />
+      Open the console to see your results.
+      <br /><br />
+      Sample 1<br />
+      Input: tacocat<br />
+      Palindromes: ["t", "a", "c", "o", "c", "a", "t", "coc", "acoca",
+      "tacocat"]<br />
+      Output: 10<br />
+      <br /><br />
+      Sample 2<br />
+      Input: daata<br />
+      Palindromes: ["d", "a", "a", "t", "a", "aa", "ata"]<br />
+      Output: 7
+
+      <script type="text/javascript">
+        const findPalindromes = (inputString) => {
+          let len = Math.floor(inputString.length / 2);
+          for (let i = 0; i < len; i++) {
+            if (inputString[i] !== inputString[inputString.length - i - 1]) {
+              return false;
+            }
+          }
+          return true;
+        };
+
+        // const countPalindromes = (strArrays) => {
+        //   let count = 0;
+        //   for (let i = 0; i < strArrays.length; i++) {
+        //     if (findPalindromes(strArrays[i])) {
+        //       count++;
+        //     }
+        //   }
+
+        //   return count;
+        // };
+
+        const countPalindromes = (str) => {
+          let count = 0;
+          for (let i = 0; i < str.length; i++) {
+            const isPol = findPalindromes(str[i]);
+            if (isPol) {
+              count++;
+            }
+          }
+        };
+		
+        console.log(
+          countPalindromes([
+            "t",
+            "a",
+            "c",
+            "o",
+            "c",
+            "a",
+            "t",
+            "coc",
+            "acoca",
+            "tacocat",
+          ])
+        );
+        console.log(countPalindromes(["d", "a", "a", "t", "a", "aa", "ata"]));
+      </script>
+    </p>
+  </body>
+</html>
